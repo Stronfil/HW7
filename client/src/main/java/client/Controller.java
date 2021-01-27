@@ -10,7 +10,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -36,7 +35,6 @@ public class Controller implements Initializable {
     private DataInputStream in;
     private DataOutputStream out;
     private final String IP_ADDRESS = "localhost";
-    private final int PORT = 8189;
 
     private boolean authenticated;
     private String nickname;
@@ -67,6 +65,7 @@ public class Controller implements Initializable {
 
     private void connect() {
         try {
+            int PORT = 7373;
             socket = new Socket(IP_ADDRESS, PORT);
             in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream());

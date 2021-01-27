@@ -1,4 +1,6 @@
 package server;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,7 +8,7 @@ import java.net.Socket;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class Server {
+public class Server extends Application {
     private ServerSocket server;
     private final List<ClientHandler> clients;
     private final AuthService authService;
@@ -16,7 +18,7 @@ public class Server {
         authService = new SimpleAuthService();
 
         try {
-            int PORT = 8189;
+            int PORT = 7373;
             server = new ServerSocket(PORT);
             System.out.println("Server started");
 
@@ -37,6 +39,11 @@ public class Server {
         }
     }
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+    }
+
     public void broadcastMsg(ClientHandler clientHandler, String msg){
         String message = String.format("[ %s ]: %s", clientHandler.getNickname(), msg);
         for (ClientHandler c : clients) {
@@ -48,8 +55,12 @@ public class Server {
         for (ClientHandler c : clients) {
             if(c.getNickname().equals(receiver)) {
                 c.sendMsg(message);
+                if(!c.equals(sender)){
+                    sender.sendMsg(message);
+                }
+                return;
             }
-            return;
+
         }
         sender.sendMsg(String.format("User %s not found ", receiver ));
     }
