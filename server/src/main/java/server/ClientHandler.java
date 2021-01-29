@@ -28,7 +28,7 @@ public class ClientHandler {
             new Thread(() -> {
                 try {
                     socket.setSoTimeout(120000);
-                    //цикл аутентификации
+                    //цикл аутентификации..
                     while (true) {
                         String str = in.readUTF();
 
@@ -95,7 +95,7 @@ public class ClientHandler {
                     }
 
                 } catch (SocketTimeoutException ste){
-                    System.out.println("Client disconnected");
+                    System.out.println("Client disconnect.");
                     try {
                         socket.setSoTimeout(0);
                     } catch (SocketException e) {
