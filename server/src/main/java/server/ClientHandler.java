@@ -71,7 +71,7 @@ public class ClientHandler {
                         }
                     }
 
-                    //цикл работы
+
                     while (true) {
                         String str = in.readUTF();
 
@@ -95,7 +95,7 @@ public class ClientHandler {
                     }
 
                 } catch (SocketTimeoutException ste){
-                    System.out.println("Client disconnect ");
+                    System.out.println("Client disconnected");
                     try {
                         socket.setSoTimeout(0);
                     } catch (SocketException e) {
