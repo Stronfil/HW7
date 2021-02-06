@@ -114,7 +114,7 @@ public class Database {
                 String receiver = rs.getString(2);
                 String text = rs.getString(3);
                 String date = rs.getString(4);
-                //всем сообщение
+                
                 if (receiver.equals("null")) {
                     sb.append(String.format("[ %s ] : %s\n", sender, text));
                 } else {
