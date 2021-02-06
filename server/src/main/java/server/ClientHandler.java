@@ -26,7 +26,7 @@ public class ClientHandler {
             new Thread(() -> {
                 try {
                     socket.setSoTimeout(120000);
-                    //цикл аутентификации
+                    
                     while (true) {
                         String str = in.readUTF();
 
@@ -42,9 +42,9 @@ public class ClientHandler {
                                     server.subscribe(this);
                                     System.out.println("client " + nickname + " connected " + socket.getRemoteSocketAddress());
                                     socket.setSoTimeout(0);
-                                    //==============//
+                                   
                                     sendMsg(SQLHandler.getMessageForNick(nickname));
-                                    //==============//
+                                    
                                     break;
                                 } else {
                                     sendMsg("С этим логином уже авторизовались");
@@ -90,7 +90,7 @@ public class ClientHandler {
                                 server.privateMsg(this, token[1], token[2]);
                             }
 
-                            //==============//
+                           
                             if (str.startsWith("/chnick ")) {
                                 String[] token = str.split("\\s+", 2);
                                 if (token.length < 2) {
@@ -109,7 +109,7 @@ public class ClientHandler {
                                     sendMsg("Не удалось изменить ник. Ник " + token[1] + " уже существует");
                                 }
                             }
-                            //==============//
+                          
                         } else {
                             server.broadcastMsg(this, str);
                         }
