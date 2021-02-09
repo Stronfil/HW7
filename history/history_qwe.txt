@@ -1,0 +1,309 @@
+[ nick2 ] to [ John_Connor ]: asdfasdf
+[ nick1 ] to [ John_Connor ]: asdfasdf
+[ nick3 ] : hello
+[ nick1 ] : hello
+[ John_Connor ] :  fsadfasdf 
+[ John_Connor ] : a sdfasdf s
+[ John_Connor ] : asd fasd fsad
+[ asd ] : sdf sdaf 
+[ asd ] : as df sdaf
+[ asd ] to [ John_Connor ]: as dfsdf asd
+[ asd ] : as df asd
+[ John_Connor ] : 123 123 12
+[ John_Connor ] : 1 231 2312 3
+[ John_Connor ] : 1 2312 31
+[ asd ] : sdf safd 
+[ John_Connor ] : dsfa sdf asd
+[ John_Connor ] : 12312 3123 123 123
+[ asd ] : sd fsdfasdf asdf asdf
+[ asd ] : asd fas dfasd f
+[ asd ] : as df asdf sd 
+[ John_Connor ] : e rtwert wertw ertwe rt
+[ John_Connor ] : we rtwe rtwert wert wer
+[ rty ] : sdfg dsfg d
+[ rty ] : sdfg sdfgsdfg sdfg
+[ rty ] : sdf gsdf gds
+[ John_Connor ] : as dfsad 
+[ John_Connor ] : as dfsad f
+[ John_Connor ] : q sdr sdfg
+[ asd ] to [ John_Connor ]: hg jfghj
+[ asd ] : 123123 123123 12312
+[ John_Connor ] : 222222222 2 2 2 22 2 
+[ asd ] : as dfsad f
+[ John_Connor ] : asdf asd f
+[ John_Connor ] : asdf sdf
+[ asd ] to [ John_Connor ]: asd asd as
+[ asd ] to [ John_Connor ]: asdf sadf asd
+[ asd ] : 123123123123
+[ asd ] : 123123123123
+[ asd ] to [ John_Connor ]: 123123123123
+[ asd ] : qweqweqweqweqw
+[ asd ] : qweqweqweqweqw
+[ zzzxxxxcccc ] to [ John_Connor ]: asdfsadfsad
+[ John_Connor ] : sdf sad
+[ John_Connor ] : sdfasdfsadfsd
+[ asd ] : sd fasdf asd
+[ asd ] : sd fasdf asd
+[ asd ] : s dfg sdfg sdfg
+[ asd ] : s dfg sdfg sdfg
+[ asd ] : sdfg sdfg sdfg
+[ asd ] : sdfg sdfg sdfg
+[ asd ] : d fasdf sadf
+[ asd ] : d fasdf sadf
+[ John_Connor ] : 111111111111111
+[ John_Connor ] : 111111111111111
+[ zzzxxxxcccc ] : 2222222222
+[ zzzxxxxcccc ] : df gdfg dfg
+[ zzzxxxxcccc ] : sd fdfg sdfg 
+[ John_Connor ] : sdf sdf
+[ John_Connor ] : sdf sdf sd
+[ John_Connor ] : sd fsadf sadfsadf 345 23 345 234534 
+[ zzzxxxxcccc ] to [ John_Connor ]: gfdgdsfgsd
+[ zzzxxxxcccc ] : d fgsdf
+[ John_Connor ] : sdfsd
+[ John_Connor ] : sdfs
+[ John_Connor ] : sdfsdf
+[ John_Connor ] to [ John_Connor ]: sdf
+[ John_Connor ] : dsfsd
+[ mmm ] : qweqwe
+[ mmm ] : qweqwe
+[ mmm ] : qqweqwe
+[ John_Connor ] : qweqwe
+[ John_Connor ] : qwe
+[ John_Connor ] : qweq
+[ John_Connor ] : e
+[ John_Connor ] : w
+[ John_Connor ] : 
+[ John_Connor ] : w
+[ John_Connor ] : q
+[ John_Connor ] : e
+[ John_Connor ] : w
+[ John_Connor ] : q
+[ John_Connor ] : 
+[ mmm ] : qwe
+[ John_Connor ] : eq
+[ John_Connor ] : dasda
+[ John_Connor ] : 
+[ John_Connor ] : asda
+[ John_Connor ] : as
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : as
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : as
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : as
+[ John_Connor ] : fsdf
+[ John_Connor ] : sd
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : sd
+[ John_Connor ] : 
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : adas
+[ John_Connor ] : asd
+[ John_Connor ] : das
+[ John_Connor ] : as
+[ John_Connor ] : das
+[ John_Connor ] : d
+[ John_Connor ] : as
+[ John_Connor ] : da
+[ John_Connor ] : sd
+[ John_Connor ] : a
+[ John_Connor ] : sd
+[ John_Connor ] : das
+[ John_Connor ] : d
+[ John_Connor ] : as
+[ John_Connor ] : da
+[ John_Connor ] : sd
+[ John_Connor ] : as
+[ John_Connor ] : d
+[ John_Connor ] : as
+[ John_Connor ] : das
+[ John_Connor ] : d
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : asd
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : asd
+[ John_Connor ] : a
+[ John_Connor ] : sd
+[ John_Connor ] : as
+[ John_Connor ] : d
+[ John_Connor ] : ad
+[ John_Connor ] : as
+[ John_Connor ] : asdas
+[ John_Connor ] : as
+[ John_Connor ] : 
+[ John_Connor ] : 
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : a
+[ John_Connor ] : sdfsd
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : df
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : wqe
+[ John_Connor ] : zxc
+[ John_Connor ] : sdfs
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : sd
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : sd
+[ John_Connor ] : sdfs
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : sd
+[ asd ] : sdfs
+[ asd ] : f
+[ asd ] : d
+[ asd ] : s
+[ asd ] : f
+[ asd ] : s
+[ asd ] : f
+[ asd ] : s
+[ asd ] : f
+[ asd ] : s
+[ asd ] : f
+[ asd ] : df
+[ asd ] : s
+[ John_Connor ] : sdfs
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : df
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : df
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : ds
+[ John_Connor ] : 
+[ John_Connor ] : f
+[ John_Connor ] : 
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : 
+[ John_Connor ] : 
+[ John_Connor ] : sd
+[ John_Connor ] : 
+[ John_Connor ] : df
+[ John_Connor ] : s
+[ John_Connor ] : f
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : fd
+[ John_Connor ] : s
+[ John_Connor ] : 
+[ John_Connor ] : d
+[ John_Connor ] : asd
+[ John_Connor ] : sa
+[ John_Connor ] : a
+[ John_Connor ] : d
+[ John_Connor ] : s
+[ John_Connor ] : a
+[ John_Connor ] : 
+[ bbb ] : sdfs
+[ bbb ] : f
+[ bbb ] : f
+[ bbb ] : s
+[ bbb ] : f
+[ bbb ] : df
+[ bbb ] : sd
+[ bbb ] : 
+[ bbb ] : 
+[ John_Connor ] : sdf
+[ John_Connor ] : sdfsd
+[ John_Connor ] : sdfsdf
+
+[ John_Connor ]: asd
+[ John_Connor ]: as
+[ John_Connor ]: a
+[ John_Connor ]: d
+[ John_Connor ]: as
+[ John_Connor ]: 
+[ John_Connor ]: s
+[ John_Connor ]: a
+[ John_Connor ]: d
+[ John_Connor ]: 
+[ John_Connor ]: 
+[ asd ]: sd
+[ asd ]: 
+[ asd ]: f
+[ asd ]: d
+[ asd ]: 
+[ asd ]: f
+[ asd ]: sd
+[ asd ]: s
+[ asd ]: f
+[ asd ]: sd
+[ asd ]: s
+[ asd ]: f
+[ asd ]: d
+[ asd ]: s
+[ asd ]: 
+[ asd ]: f

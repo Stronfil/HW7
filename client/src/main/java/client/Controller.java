@@ -20,11 +20,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -51,6 +51,7 @@ public class Controller implements Initializable {
 
     private boolean authenticated;
     private String nickname;
+    private String login;
 
     private Stage stage;
     private Stage regStage;
@@ -66,6 +67,7 @@ public class Controller implements Initializable {
         authPanel.setManaged(!authenticated);
         if (!authenticated) {
             nickname = "";
+            History.stop();
         }
         setTitle(nickname);
         textArea.clear();
@@ -98,7 +100,7 @@ public class Controller implements Initializable {
 
             new Thread(() -> {
                 try {
-                    //цикл аутентификации
+
                     while (true) {
                         String str = in.readUTF();
 
@@ -106,6 +108,8 @@ public class Controller implements Initializable {
                             if (str.startsWith(Command.AUTH_OK)) {
                                 nickname = str.split("\\s")[1];
                                 setAuthenticated(true);
+                                textArea.appendText(History.getLast100LinesOfHistory(login));
+                                History.start(login);
                                 break;
                             }
 
@@ -126,7 +130,7 @@ public class Controller implements Initializable {
                         }
                     }
 
-                    //цикл работы
+
                     while (true) {
                         String str = in.readUTF();
 
@@ -144,9 +148,15 @@ public class Controller implements Initializable {
                                     }
                                 });
                             }
+                            if(str.startsWith("/yournick")){
+                                nickname =str.split("")[1];
+                                setTitle(nickname);
+                            }
+
 
                         } else {
                             textArea.appendText(str + "\n");
+                            History.writeLine(str);
                         }
                     }
                 } catch (RuntimeException e) {
@@ -183,6 +193,7 @@ public class Controller implements Initializable {
         if (socket == null || socket.isClosed()) {
             connect();
         }
+        login = loginField.getText().trim();
 
         String msg = String.format("%s %s %s", Command.AUTH, loginField.getText().trim(), passwordField.getText().trim());
 
