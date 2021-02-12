@@ -6,9 +6,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
-import java.net.SocketException;
 import java.net.SocketTimeoutException;
-import java.sql.SQLOutput;
 
 public class ClientHandler {
     private Server server;
@@ -25,7 +23,7 @@ public class ClientHandler {
             in = new DataInputStream(socket.getInputStream());
             out = new DataOutputStream(socket.getOutputStream());
 
-            new Thread(() -> {
+            server.getClientsExecutorService().execute(() -> {
                 try {
                     socket.setSoTimeout(120000);
                     //цикл аутентификации
@@ -43,6 +41,8 @@ public class ClientHandler {
                                     sendMsg(Command.AUTH_OK + " " + nickname);
                                     server.subscribe(this);
                                     System.out.println("client " + nickname + " connected " + socket.getRemoteSocketAddress());
+                                    socket.setSoTimeout(0);
+
                                     break;
                                 } else {
                                     sendMsg("С этим логином уже авторизовались");
@@ -78,7 +78,6 @@ public class ClientHandler {
                         if (str.startsWith("/")) {
                             if (str.equals(Command.END)) {
                                 sendMsg(Command.END);
-                                System.out.println("client disconnected");
                                 break;
                             }
                             if (str.startsWith(Command.PRV_MSG)) {
@@ -89,38 +88,50 @@ public class ClientHandler {
                                 server.privateMsg(this, token[1], token[2]);
                             }
 
+
+                            if (str.startsWith("/chnick ")) {
+                                String[] token = str.split("\\s+", 2);
+                                if (token.length < 2) {
+                                    continue;
+                                }
+                                if (token[1].contains(" ")) {
+                                    sendMsg("Ник не может содержать пробелов");
+                                    continue;
+                                }
+                                if (server.getAuthService().changeNick(this.nickname, token[1])) {
+                                    sendMsg("/yournickis " + token[1]);
+                                    sendMsg("Ваш ник изменен на " + token[1]);
+                                    this.nickname = token[1];
+                                    server.broadcastClientList();
+                                } else {
+                                    sendMsg("Не удалось изменить ник. Ник " + token[1] + " уже существует");
+                                }
+                            }
+
                         } else {
                             server.broadcastMsg(this, str);
                         }
                     }
-
-                } catch (SocketTimeoutException ste){
-                    System.out.println("Client disconnect ");
-                    try {
-                        socket.setSoTimeout(0);
-                    } catch (SocketException e) {
-                        e.printStackTrace();
-                    }
-
+                } catch (SocketTimeoutException e) {
+                    sendMsg(Command.END);
                 } catch (RuntimeException e) {
                     System.out.println(e.getMessage());
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
                     server.unsubscribe(this);
+                    System.out.println("client disconnected");
                     try {
                         socket.close();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
-            }).start();
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
 
     public void sendMsg(String msg) {
         try {

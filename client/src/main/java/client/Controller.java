@@ -3,7 +3,6 @@ package client;
 import commands.Command;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,7 +17,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.WindowEvent;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -52,6 +50,10 @@ public class Controller implements Initializable {
     private boolean authenticated;
     private String nickname;
 
+    ///==============///
+    private String login;
+    ///==============///
+
     private Stage stage;
     private Stage regStage;
     private RegController regController;
@@ -66,6 +68,9 @@ public class Controller implements Initializable {
         authPanel.setManaged(!authenticated);
         if (!authenticated) {
             nickname = "";
+            ///==============///
+            History.stop();
+            ///==============///
         }
         setTitle(nickname);
         textArea.clear();
@@ -106,6 +111,10 @@ public class Controller implements Initializable {
                             if (str.startsWith(Command.AUTH_OK)) {
                                 nickname = str.split("\\s")[1];
                                 setAuthenticated(true);
+                                ///==============///
+                                textArea.appendText(History.getLast100LinesOfHistory(login));
+                                History.start(login);
+                                ///==============///
                                 break;
                             }
 
@@ -145,8 +154,17 @@ public class Controller implements Initializable {
                                 });
                             }
 
+                            //==============//
+                            if (str.startsWith("/yournickis ")) {
+                                nickname = str.split(" ")[1];
+                                setTitle(nickname);
+                            }
+                            //==============//
                         } else {
                             textArea.appendText(str + "\n");
+                            ///==============///
+                            History.writeLine(str);
+                            ///==============///
                         }
                     }
                 } catch (RuntimeException e) {
@@ -183,6 +201,10 @@ public class Controller implements Initializable {
         if (socket == null || socket.isClosed()) {
             connect();
         }
+
+        ///==============///
+        login = loginField.getText().trim();
+        ///==============///
 
         String msg = String.format("%s %s %s", Command.AUTH, loginField.getText().trim(), passwordField.getText().trim());
 
