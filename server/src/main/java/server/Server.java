@@ -26,7 +26,7 @@ public class Server {
             throw new RuntimeException("Не удалось подключиться к БД");
         }
         authService = new DBAuthServise();
-        clientsExecutorService= Executors.newCachedThreadPool();
+        clientsExecutorService = Executors.newCachedThreadPool();
 
         try {
             server = new ServerSocket(PORT);
@@ -50,6 +50,7 @@ public class Server {
             }
         }
     }
+
     public ExecutorService getClientsExecutorService() {
         return clientsExecutorService;
     }
